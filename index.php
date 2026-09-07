@@ -1,4 +1,13 @@
 <?php
+// Service Account verification endpoint
+if ($_SERVER['REQUEST_URI'] === '/google-site-verification.html') {
+    header('Content-Type: text/html');
+    echo 'google-site-verification: google-site-verification.html';
+    exit;
+}
+
+$secret = getenv('BRIDGE_SECRET') ?: 'MY_SECRET_BRIDGE_KEY_123';
+$dataFile = '/tmp/urls.json';
 $secret = getenv('BRIDGE_SECRET') ?: 'MY_SECRET_BRIDGE_KEY_123';
 $dataFile = __DIR__ . '/urls.json';
 
