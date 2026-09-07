@@ -41,6 +41,7 @@ $urls = json_decode(file_get_contents($dataFile), true) ?: [];
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
     <title>Discovery Feed</title>
+    <meta name="google-site-verification" content="ihhndB8eumDzU7laPZy3ounA7bD6k-NfcTohxNj85dw" />
 </head>
 <body style="font-family: sans-serif; padding: 20px;">
     <h2>Network Discovery Feed</h2>
